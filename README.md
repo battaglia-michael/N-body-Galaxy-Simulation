@@ -17,7 +17,8 @@ defines the Quad class, which is an object representing a quadrant in 2D space. 
 # BHTree.py 
 defines the BHTree class, which is an object representing a node of the Barnes-Hut tree. It carries a Quad object representing the quadrant that the node occupies. If it is not a stud node, it carries a Body object representing the aggregate particle in the node. If it has been given more than one particle, it carries 4 BHTree objects that are its child nodes. Class carries a function for inserting Bodies into the node. If it is a stub node, it accepts the Body and becomes a leaf node. If it is a leaf node, it changes its Body object into a aggregate particle, and gives its two Bodies to the appropriate children. If it is a branch node, it updates its aggregate Body and gives the new Body to its appropriate child. Class also carries a function for computing force of the node on a Body. If Body and the node’s aggregate Body satisfy Equation 3.1, then force is computed between the two. If not, then force is computed from each of the node’s children on the Body instead. If the node is a stub, then no force is added to the Body. Class also carries a function for recursively plotting the entire BHTree, with all non-stub children, grandchildren, etc
 
-# MCgalaxy.py contains functions for generating various initial distributions
+# MCgalaxy.py 
+contains functions for generating various initial distributions
 of particles using Monte Carlo methods. It can generate a galaxy using methods described in Section 2, and it can also generate a uniform distribution of particles with random velocities.
 
 # BHtest.py 
